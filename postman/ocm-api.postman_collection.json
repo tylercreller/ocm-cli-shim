@@ -1,0 +1,62 @@
+{
+	"info": {
+		"_postman_id": "e1e8bb5a-3356-4490-b401-67f7913cd564",
+		"name": "ocm-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23843059"
+	},
+	"item": [
+		{
+			"name": "Foo Bar Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{ocm_api_url}}/foo/bar",
+					"host": [
+						"{{ocm_api_url}}"
+					],
+					"path": [
+						"foo",
+						"bar"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{ocm_token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"pm.sendRequest('localhost:8082', (err, response) => {",
+					"    const responseJson = response.json();",
+					"    pm.environment.set(\"ocm_token\", responseJson.token);",
+					"    pm.environment.set(\"ocm_api_url\", responseJson.url);",
+					"})"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
