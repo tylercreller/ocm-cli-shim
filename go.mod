@@ -1,4 +1,4 @@
-module gitlab.cee.redhat.com/tcreller/ocm-cli-shim
+module github.com/tylercreller/ocm-cli-shim
 
 go 1.19
 
