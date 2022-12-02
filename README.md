@@ -29,3 +29,9 @@ pm.sendRequest('localhost:8082', (err, response) => {
 ```
 
 Lastly, configure your requests to use the environment variables. `ocm_token` will be used for your `Bearer Token` authorization and `ocm_api_url` will be used in your request URLs.
+
+#### Additional Features
+##### Automatic ocm-cli request conversion
+When using the embedded postman collection an ocm-style request will be generated in the visualize tab. This makes things easier to share with others who may only use the ocm-cli.
+
+![postman visualize screenshot](./images/ocm-cli-visualize.png)
