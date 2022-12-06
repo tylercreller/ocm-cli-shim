@@ -69,7 +69,7 @@
 					"        output += `ocm ${method} /${path} `;",
 					"",
 					"        pm.request.url.query.each((qp) => {",
-					"            output += `--parameter ${qp.key}=${qp.value} `",
+					"            output += `--parameter ${qp.key}=\"${decodeURIComponent(qp.value)}\" `",
 					"        });",
 					"",
 					"        return output;",
