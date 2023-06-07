@@ -63,7 +63,7 @@
 					"        let output = '';",
 					"",
 					"        if (Object.keys(pm.request.body).length) {",
-					"            output += `echo ${pm.request.body.raw} | `;",
+					"            output += `echo '${pm.request.body.raw}' | `;",
 					"        }",
 					"",
 					"        output += `ocm ${method} /${path} `;",
