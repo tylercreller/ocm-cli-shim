@@ -1,25 +1,26 @@
 {
 	"info": {
-		"_postman_id": "c987985d-2da3-482e-b5b8-f2fb36df0bb3",
+		"_postman_id": "027f61a0-d80e-4bd1-9633-1dc91bdc0481",
 		"name": "ocm-api",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "23843059"
 	},
 	"item": [
 		{
-			"name": "Foo Bar Request",
+			"name": "Get Current Account (ocm whoami)",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{ocm_api_url}}/api/accounts_mgmt/v1",
+					"raw": "{{ocm_api_url}}/api/accounts_mgmt/v1/current_account",
 					"host": [
 						"{{ocm_api_url}}"
 					],
 					"path": [
 						"api",
 						"accounts_mgmt",
-						"v1"
+						"v1",
+						"current_account"
 					]
 				}
 			},
