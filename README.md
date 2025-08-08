@@ -2,7 +2,7 @@
 This shim provides an API layer on top of your local ocm-cli instance that allows an application (i.e. Postman) to retrieve information from your current session; such as your authentication token and current environment URL.
 
 ## Pre-requisites
-* golang 1.19 or higher
+* golang 1.24 or higher
 * [ocm-cli](https://github.com/openshift-online/ocm-cli) setup and logged into an environment
 
 ## Running the shim
